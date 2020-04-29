@@ -1,0 +1,52 @@
+body {
+  background-color: #343A40;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.form-box {
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin: 40px auto;
+  margin-top: 130px;
+  padding: 40px;
+  width: 310px;
+  height: 630px;
+}
+
+#signup-header {
+  text-align: center;
+  padding: 20px;
+}
+
+.login-msg {
+  text-align: center;
+}
+
+.signup-btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 30px;
+  background-color: #ffffff;
+  border: 1px solid #343A40;
+  color: #00c1d5;
+  transition: 0.4s;
+}
+
+.signup-btn:hover {
+  background-color: #343A40;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  transition: 0.4s;
+}
+
+.error-msg {
+  margin-top: 20px;
+  color: red;
+  text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+  .form-box {
+    margin-top: 60px;
+  }
+}

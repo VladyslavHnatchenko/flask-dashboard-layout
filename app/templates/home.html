@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="content-header">
+    <h3>Home</h3>
+    <hr>
+</div>
+<button id="btn" class="btn btn-primary">Generate Players</button>
+
+<div class="container-fluid top-scores-list">
+    <div class="row">
+        <div class="col-xl-12">
+            <h5><strong>All Players</strong></h5>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Rank No.</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Action</th>
+                    <th scope="col">Device</th>
+                    <th scope="col">OS Version</th>
+                    <th scope="col">Purchase Data</th>
+                    <th scope="col">Sale Data</th>
+                </tr>
+                </thead>
+                <tbody id="response">
+                <tr>
+                    {% for result in get_data|sort(reverse=True) %}
+                    <tr>
+                        <td scope="row">{{ result[0] }}</td>
+                        <td scope="row">{{ result[1] }}</td>
+                        <td scope="row">{{ result[2] }}</td>
+                        <td scope="row">{{ result[3] }}</td>
+                        <td scope="row">{{ result[4] }}</td>
+                        <td scope="row">{{ result[5] }}</td>
+                        <td scope="row">{{ result[6] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="static/js/script.js"></script>
+
+{% endblock %}

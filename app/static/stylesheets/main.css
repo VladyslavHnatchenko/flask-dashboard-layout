@@ -1,0 +1,393 @@
+body {
+  background-color: #ECF0F1;
+  font-family: 'Orbitron', sans-serif;
+}
+
+tr {
+  text-align: center;
+}
+
+td {
+  text-align: center;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  display: flex;
+  align-items: stretch;
+}
+
+#sidebar {
+  width: 240px;
+  height: 100%;
+  background-color: #343A40;
+  position: fixed;
+  z-index: 99;
+}
+
+.sidebar-title h5 {
+  text-align: left;
+  margin:  10px;
+  margin-top: 20px;
+  font-weight: bolder;
+  color: #F5F5F5;
+}
+
+.sidebar-component {
+  width: 100%;
+  background-color: #343A40;
+  padding: 4px;
+  transition: 0.3s;
+  color: #F5F5F5;
+}
+
+.sidebar-component i {
+  margin: 10px;
+  margin-bottom: 7px;
+  margin-left: 20px;
+}
+
+.sidebar-component:hover {
+  width: 100%;
+  background-color: #F5F5F5;
+  padding: 4px;
+  transition: 0.3s;
+  color: #343A40;
+}
+
+.navbar .nav-item .nav-link {
+  margin-right: 20px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.navbar .nav-item .nav-link:hover {
+  color: #00c1d5;
+}
+
+.navbar .navbar-brand:hover {
+  color: #00c1d5;
+}
+
+.navbar .navbar-brand {
+  color: #ffffff;
+}
+
+.navbar .dropdown-item {
+  text-align: center;
+}
+
+.main-title {
+  margin-top: 70px;
+}
+
+#content {
+  margin-top: 100px;
+  margin-left: 260px;
+  margin-right: 20px;
+  width: 100%;
+}
+
+.content-header {
+  min-width: 100%;
+}
+
+.home-stats-sect {
+  border: 1px solid #F4F6F7;
+  border-radius: 4px;
+  padding: 20px;
+  background-color: #ffffff;
+  text-align: left;
+}
+
+.recent-scores-table h5 {
+  padding: 20px;
+  text-align: left;
+}
+
+.statistics-dtd {
+  border: 1px solid #F4F6F7;
+  border-radius: 8px;
+  padding: 18px;
+  background-color: #ffffff;
+  text-align: left;
+  border-left: 6px solid #b565a7;
+}
+
+.pie-chart-stat {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 60px;
+}
+
+#highest-scores {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#stats-header {
+  font-weight: bolder;
+  color: #b565a7;
+}
+
+#today-sect {
+  border-left: 6px solid #5b5ea6;
+}
+
+#today-sect h6 {
+  font-weight: bolder;
+  color: #5b5ea6;
+}
+
+#mtd-sect {
+  border-left: 6px solid #d65076;
+}
+
+#mtd-sect h6 {
+  font-weight: bolder;
+  color: #d65076;
+}
+
+#qtd-sect {
+  border-left: 6px solid #efc050;
+}
+
+#qtd-sect h6 {
+  font-weight: bolder;
+  color: #efc050;
+}
+
+#ytd-sect {
+  border-left: 6px solid #45b8ac;
+}
+
+#ytd-sect h6 {
+  font-weight: bolder;
+  color: #45b8ac;
+}
+
+.col-lg-5 {
+  margin-bottom: 30px;
+}
+
+.col-lg-7 {
+  margin-bottom: 30px;
+}
+
+.col-md-6 {
+  margin-bottom: 30px;
+}
+
+.col-xs-12 {
+  margin-bottom: 40px;
+}
+
+.data {
+  color: red;
+}
+
+.recent-scores-table {
+  border: 1px solid #F4F6F7;
+  border-radius: 8px;
+  background-color: #ffffff;
+  text-align: center;
+  border-left: 6px solid #dd4124;
+}
+
+.recent-scores-table h5 {
+  font-weight: bolder;
+  color: #dd4124;
+}
+
+.top-scores-list {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 30px;
+}
+
+.profile-recent-games {
+  background-color: #ffffff;
+  padding: 25px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.profile {
+  background-color: #ffffff;
+  padding: 36px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.profile-stats {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 54px;
+  border-radius: 20px;
+}
+
+.profile img {
+  width: 250px;
+  margin-bottom: 20px;
+}
+
+.profile-avg-chart {
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 991px) {
+  .navbar .nav-item .nav-link {
+    margin-right: 0px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #sidebar {
+    width: 170px;
+    height: 100%;
+    background-color: #343A40;
+    padding: 20px;
+  }
+
+  .sidebar-title h5 {
+    margin: 5px;
+    font-weight: bolder;
+    color: #F5F5F5;
+  }
+
+  .sidebar-component {
+    padding: 5px;
+    font-size: 10px;
+  }
+
+  .sidebar-component:hover {
+    background-color: #343A40;
+    color: #ffffff;
+  }
+
+  #content {
+    margin-left: 190px;
+    width: 100%;
+  }
+
+  .navbar .navbar-brand {
+    margin-left: 5px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #sidebar {
+    width: 55px;
+    height: 100%;
+    background-color: #343A40;
+    z-index: 99;
+  }
+
+  table {
+    font-size: 7px;
+  }
+
+  #content {
+    margin-left: 60px;
+    width: 100%;
+  }
+
+  .navbar .navbar-brand {
+    margin-left: 0px;
+    font-size: 10px;
+  }
+
+  .main-title {
+    margin-top: 50px;
+  }
+
+  .sidebar-title h5 {
+    margin: 0px;
+    margin-bottom: 20px;
+    font-weight: bolder;
+    color: #F5F5F5;
+    font-size: 4px;
+  }
+
+  .sidebar-component {
+    text-align: center;
+    font-size: 0px;
+    padding: 0px;
+    margin-bottom: 0px;
+  }
+
+  .sidebar-component:hover {
+    background-color: #343A40;
+    color: #ffffff;
+    padding: 0px;
+  }
+
+  .sidebar-component i {
+    margin: 0px;
+    margin-left: 0px;
+    margin-bottom: 8px;
+    font-size: 13px;
+  }
+
+  .content-header {
+    margin-left: 10px;
+  }
+
+  .profile {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+  }
+
+  .profile img {
+    width: 100px;
+  }
+
+  #lifetime-header {
+    font-size: 14px;
+  }
+
+  .pie-chart-stat {
+    margin-left: 10px;
+  }
+}
+
+@media screen and (width: 640px), screen and (height: 360px) {
+  .main-title {
+    margin-top: 40px;
+    margin-bottom: 0px;
+  }
+
+  .sidebar-component {
+    margin: 0px;
+    padding: 0px;
+    font-size: 4px;
+  }
+
+  .sidebar-component i {
+    margin: 0px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 0px;
+    font-size: 6px;
+  }
+
+  .sidebar-title h5 {
+    margin-bottom: 3px;
+    font-size: 5px;
+  }
+
+  .sidebar-component {
+    font-size: 10px;
+    padding: 0px;
+    margin-bottom: 0px;
+  }
+}

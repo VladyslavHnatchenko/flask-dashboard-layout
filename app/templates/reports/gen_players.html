@@ -1,0 +1,11 @@
+{% for result in get_data|sort(reverse=True) %}
+<tr>
+    <td scope="row">{{ result[0] }}</td>
+    <td scope="row">{{ result[1] }}</td>
+    <td scope="row">{{ result[2] }}</td>
+    <td scope="row">{{ result[3] }}</td>
+    <td scope="row">{{ result[4] }}</td>
+    <td scope="row">{{ result[5] }}</td>
+    <td scope="row">{{ result[6] }}</td>
+</tr>
+{% endfor %}

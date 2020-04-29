@@ -1,0 +1,80 @@
+{% extends "layout.html"%}
+{% block content %}
+<div class="content-header">
+    <h3>My Profile</h3>
+    <hr>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-5">
+            <div class="profile">
+                <img src="{{url_for( 'static', filename='media/profilepic.png') }}" alt="">
+                <h4><strong>{{ username }}</strong></h4>
+            </div>
+        </div>
+
+        <div class="col-lg-7">
+            <div class="profile-stats">
+                <h4><strong>Profile Data</strong></h4>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Country</th>
+                        <th scope="col">City</th>
+                        <th scope="col">Latitude</th>
+                        <th scope="col">Longitude</th>
+                        <th scope="col">Timezone</th>
+                        <th scope="col">IP</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{ geo_data["country"] }}</td>
+                            <td>{{ geo_data["city"] }}</td>
+                            <td>{{ geo_data["lat"] }}</td>
+                            <td>{{ geo_data["lon"] }}</td>
+                            <td>{{ geo_data["timezone"] }}</td>
+                            <td>{{ geo_data["query"] }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="profile-recent-games">
+                <h4><strong>My Data</strong></h4>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Rank No.</th>
+                        <th scope="col">Username</th>
+                        <th scope="col">Action</th>
+                        <th scope="col">Device</th>
+                        <th scope="col">OS Version</th>
+                        <th scope="col">Purchase Data</th>
+                        <th scope="col">Sale Data</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{ event_data[0] }}</td>
+                            <td>{{ username }}</td>
+                            <td>{{ event_data[2] }}</td>
+                            <td>{{ event_data[3] }}</td>
+                            <td>{{ event_data[4] }}</td>
+                            <td>{{ event_data[5] }}</td>
+                            <td>{{ event_data[6] }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

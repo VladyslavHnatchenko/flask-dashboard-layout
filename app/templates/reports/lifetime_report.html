@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="content-header">
+    <h3 id="lifetime-header">Lifetime Report of {{ todays_date }}</h3>
+    <hr>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div id="today-sect" class="home-stats-sect">
+                <h6>Players Online</h6>
+                <p>{{ total }}</p>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div id="qtd-sect" class="home-stats-sect">
+                <h6>Total Players</h6>
+                <p>{{ total_players }}</p>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div id="mtd-sect" class="home-stats-sect">
+                <h6>Retention Data</h6>
+                <p>{{ sale }}</p>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div id="ytd-sect" class="home-stats-sect">
+                <h6>Revenue Data</h6>
+                <p>{{ revenue }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <div id="highest-scores" class="recent-scores-table">
+                <h5>Top 5 Users</h5>
+                <table class="table rst">
+                    <thead>
+                    <tr>
+                        <th scope="col">Rank No.</th>
+                        <th scope="col">Username</th>
+                        <th scope="col">Purchase Data</th>
+                        <th scope="col">Sale Data</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        {% for result in event_data|sort(reverse=True) %}
+                    <tr>
+                        <td scope="row">{{ result[0] }}</td>
+                        <td scope="row">{{ result[1] }}</td>
+                        <td scope="row">{{ result[5] }}</td>
+                        <td scope="row">{{ result[6] }}</td>
+                    </tr>
+                    {% endfor %}
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="pie-chart-stat col-lg-12">
+                    <h5>Players Spreading Around The World</h5>
+                    <canvas id="chart" width="600" height="400"></canvas>
+                    <script>
+                var pieData = [
+                  {% for item, label, colors in chart_ %}
+                    {
+                      value: {{ item }},
+                      label: "{{ label }}",
+                      color : "{{ colors }}"
+                    },
+                  {% endfor %}
+                ];
+                var mychart = document.getElementById("chart").getContext("2d");
+                steps = 10
+                max = {{ max }}
+                new Chart(document.getElementById("chart").getContext("2d")).Pie(pieData);
+
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
