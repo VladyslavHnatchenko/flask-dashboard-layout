@@ -46,10 +46,8 @@ pip install -r requirements.txt
 ```
 Change app.config in /app/main.py and comment/uncomment according to example in /app/main.py
 ```bash 
-app.config['MYSQL_DATABASE_USER'] = 'Insert your data'
 app.config['MYSQL_DATABASE_PASSWORD'] = 'Insert your data'
 app.config['MYSQL_DATABASE_HOST'] = 'Insert your data'
-app.config['MYSQL_DATABASE_DB'] = 'Insert your data'
 ```
 Run locally:
 ```bash 
